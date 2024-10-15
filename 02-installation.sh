@@ -4,7 +4,7 @@ echo "user id is: $USERID"
  if [ $USERID -ne 0 ]
  then
    echo "to install mysql give the root acess"
-   exit 1
+   
 fi
 
  
