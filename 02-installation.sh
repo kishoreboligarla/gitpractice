@@ -4,7 +4,8 @@ echo "user id is: $USERID"
  if [ $USERID -ne 0 ]
  then
    echo "to install mysql give the root acess"
-   
 fi
+dnf install git -y
+
 
  
