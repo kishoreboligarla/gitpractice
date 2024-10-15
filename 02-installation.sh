@@ -7,12 +7,12 @@ echo "user id is: $USERID"
       exit 1
   fi
 dnf list install git 
-  if[ $? -ne 0]
+  if[ $? -ne 0 ]
   then 
      echo "git not installed going to install.."
      dnf install git -y
    else
-   echo"git already installed nothing to do"
+   echo "git already installed nothing to do"
 fi
 
 
