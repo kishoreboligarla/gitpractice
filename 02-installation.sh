@@ -11,9 +11,13 @@ dnf list install git
   then 
      echo "git not installed going to install.."
      dnf install git -y
+     if [ &? -ne 0 ]
+    echo "git installation is not sucess pls check it.."
+    exit 1
+   else " git installation is sucess "
+fi
    else
    echo "git already installed nothing to do"
-fi
-
+  fi 
 
  
