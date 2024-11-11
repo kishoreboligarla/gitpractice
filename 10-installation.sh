@@ -16,12 +16,15 @@ USERID=$(id -u)
    fi       
 
    dnf list installed mysql
-      if [ $? -ne 0 ]
-       then echo "mysql is not installed going to install.."
-         dnf install mysql -y
-         if [ $? -ne o ]
-           then echo "mysql installation is failure check it.."
+   if [ $? -ne 0 ]
+ then echo "mysql is not installed going to install.."
+     dnf install mysql -y
+     if [ $? -ne o ]
+        then 
+           echo "mysql installation is failure check it.."
           exit 1
-           else
+      else
           echo "mysql installation is sucess"
        fi
+  else
+     echo "mysql is installed nothing to do."
