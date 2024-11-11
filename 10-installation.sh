@@ -6,11 +6,22 @@ USERID=$(id -u)
    then 
      echo " give the root access"
      exit 1
- fi
+    fi
  dnf list installed git 
    if [ $? -ne 0 ]
-     then echo " mysql not installed going to install"
+      then echo " git not installed going to install"
        dnf install git -y
- else
+     else
      echo "git is already installed nothing to do"
- fi       
+   fi       
+
+   dnf list installed mysql
+      if [ $? -ne 0 ]
+       then echo "mysql is not installed going to install.."
+         dnf install mysql -y
+         if [ $? -ne o ]
+           then echo "mysql installation is failure check it.."
+          exit 1
+           else
+          echo "mysql installation is sucess"
+       fi
