@@ -18,7 +18,7 @@ VALIDATE(){
   fi
 }
  CHECK_ROOT
- dnf installed mysql
+ dnf list installed mysql
   if [ $? -ne 0 ]
   then
   echo "mysql is not installed going to install"
