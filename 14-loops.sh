@@ -4,7 +4,7 @@ USERID=$(id -u)
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-     echo "run the script with rrot priviliges"
+     echo "run the script with root priviliges"
      exit 1
      fi
 }
@@ -20,11 +20,11 @@ VALIDATE(){
 CHECK_ROOT
   for package in $@
    do
-      dnf installed list $package
+      dnf list installed list $package
      if [ $? -ne 0 ]
       then
        echo "$package is not installed, going to install it.."
-        dnf install $package -y
+        dnf list install $package -y
         VALIDATE $? "Installing $package"
       else
         echo "$package is already installed..nothing to do"
