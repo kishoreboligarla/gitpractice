@@ -26,3 +26,4 @@ VALIDATE(){
   VALIDATE $? mysqlinstalling
   else 
    echo"mysql is installed nothing to do"
+   fi
