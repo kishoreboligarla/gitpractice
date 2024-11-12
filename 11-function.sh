@@ -27,3 +27,13 @@ VALIDATE(){
   else 
    echo "mysql is installed nothing to do"
    fi
+   CHECK_ROOT
+ dnf list installed git
+  if [ $? -ne 0 ]
+  then
+  echo "git is not installed going to install"
+  dnf install git -y
+  VALIDATE $? gitinstalling
+  else 
+   echo "git is installed nothing to do"
+   fi
