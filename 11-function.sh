@@ -1,11 +1,11 @@
 #!/bin/bash
 
-ROOT_CHECK()
- {
+# ROOT_CHECK()
+#  {
     USERID=(id -u)
     echo "user id is:$USERID"
      
- }
+#  }
 # VALIDATION()
 #    {
 #     echo $1 -ne 0
