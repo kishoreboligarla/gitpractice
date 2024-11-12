@@ -5,7 +5,7 @@ CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
      echo "run the script with rrot priviliges"
-     exit1
+     exit 1
      fi
 }
 VALIDATE(){
@@ -14,7 +14,7 @@ VALIDATE(){
     echo "$2 is failure"
     else 
     echo "$2 is sucess"
-    exit1
+    exit 1
     fi
 }
 CHECK_ROOT
