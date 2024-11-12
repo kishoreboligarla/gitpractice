@@ -13,9 +13,9 @@ VALIDATE(){
   then
   echo"$2 failled"
   exit 1
-  
   else
   echo "$2 success"
+  fi
 }
  CHECK_ROOT
  dnf installed mysql
