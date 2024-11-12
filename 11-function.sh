@@ -3,7 +3,7 @@ USERID=$(id -u)
 CHECK_ROOT(){
   if [ $USERID -ne 0 ]
   then 
-  echo"run the script with root priviliges"
+  echo "run the script with root priviliges"
   exit 1
   fi
     }
