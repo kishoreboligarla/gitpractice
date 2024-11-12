@@ -22,5 +22,8 @@
           dnf installed mysql
          VALIDATE $? mysql
             dnf install mysql -y
+         dnf installed git
+          VALIDATE $? git
+            dnf install git -y   
             
      
