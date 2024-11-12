@@ -4,7 +4,7 @@
 #  {
     USERID=$(id -u) 
     echo "user id is:$USERID"
-    USERID( ne -0 )
+    USERID(ne -0)
       then 
       echo "give the root priviliges"
      
