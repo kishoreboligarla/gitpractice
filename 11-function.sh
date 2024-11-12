@@ -2,7 +2,7 @@
 
 # ROOT_CHECK()
 #  {
-    USERID=(id -u)
+    USERID=id -u 
     echo "user id is:$USERID"
      
 #  }
