@@ -31,7 +31,7 @@ VALIDATE(){
   dnf install mysql -y
   VALIDATE $? mysqlinstalling
   else 
-   echo "mysql is installed nothing to do"
+   echo -e "$G mysql is installed nothing to do"
    fi
    CHECK_ROOT
  dnf list installed git
