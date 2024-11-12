@@ -1,7 +1,7 @@
 #!/bin/bash
 USERID=$(id -u)
 CHECK_ROOT(){
-  if [ USERID -ne 0 ]
+  if [ $USERID -ne 0 ]
   then 
   echo"run the script with root priviliges"
 }
