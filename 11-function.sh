@@ -19,7 +19,7 @@
                echo "give the root priviliges"
                exit 1
                fi 
-          dnf installed mysql
+          dnf install mysql
          VALIDATE $? mysql
             dnf install mysql -y
          dnf installed git
