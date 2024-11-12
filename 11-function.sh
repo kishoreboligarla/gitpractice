@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash/dnf
 USERID=$(id -u)
 CHECK_ROOT(){
   if [ $USERID -ne 0 ]
