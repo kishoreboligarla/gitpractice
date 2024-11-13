@@ -6,7 +6,7 @@
   N="\e[0m"
   LOGS_FOLDER="/var/logs/shell-script"
   SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-  TIMESTAMP=$(date+%Y-%m-%d-%H-%M-%S)
+  TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
   LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
   mkdir -p $LOGS_FOLDER
   CHECK_ROOT(){
@@ -47,4 +47,5 @@
           VALIDATE $? "Installing $package"
         else
           echo -e  "$package $G is already installed..nothing to do $N" &>>$LOG_FILE
+          fi
     done
