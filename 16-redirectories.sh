@@ -42,10 +42,10 @@
         dnf list installed  $package &>>$LOG_FILE
       if [ $? -ne 0 ]
         then
-        echo  -e  "$package $Y is not installed, going to install it.. $N ">>&$LOG_FILES
+        echo  -e  "$package $Y is not installed, going to install it.. $N "  >>&$LOG_FILES
           dnf  install $package -y &>>$LOG_FILE
           VALIDATE $? "Installing $package"
         else
-          echo -e  "$package $G is already installed..nothing to do $N" >>&$LOG_FILES
+          echo -e  " $package $G is already installed..nothing to do $N " >>&$LOG_FILES
         fi
     done
