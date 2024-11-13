@@ -17,7 +17,7 @@
       fi
  
   VALIDATE(){
-      if [ $1 -ne 0 ]
+      if [ $@ -ne 0 ]
       then
       echo "$2 is $R failure $N">>&$LOG_FILE
       exit 1
