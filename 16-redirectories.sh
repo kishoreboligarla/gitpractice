@@ -27,7 +27,7 @@
       fi
   }
    }
-  USAGE(){
+  USEAGE(){
   echo "USEAGE :: sudo sh 16-redirectories.sh package1 package2 ..." &>>$LOG_FILE
   exit 1
   }
