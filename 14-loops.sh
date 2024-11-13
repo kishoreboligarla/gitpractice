@@ -1,7 +1,7 @@
 #!/bin/bash
 USERID=$(id -u)
-R="\e[30m"
-G="\e[31m"
+R="\e[31m"
+G="\e[30m"
 Y="\e[32m"
 N="\e[0m"
 
