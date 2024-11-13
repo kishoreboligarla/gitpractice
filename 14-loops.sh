@@ -15,9 +15,9 @@ CHECK_ROOT(){
 VALIDATE(){
     if [ $? -ne 0 ]
     then
-    echo "$2 is failure"
+    echo "$2 is $R failure $N"
     else 
-    echo -e $R "$2 is sucess$N"
+    echo -e  "$2 is $R  sucess $N"
     exit 1
     fi
 }
@@ -27,10 +27,10 @@ CHECK_ROOT
       dnf list installed  $package
      if [ $? -ne 0 ]
       then
-       echo  -e $Y "$package is not installed, going to install it.. $N"
+       echo  -e  "$package $Y is not installed, going to install it.. $N"
         dnf  install $package -y
         VALIDATE $? "Installing $package"
       else
-        echo -e $G "$package is already installed..nothing to do $N"
+        echo -e  "$package $G is already installed..nothing to do $N"
       fi
    done
