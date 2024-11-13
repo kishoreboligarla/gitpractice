@@ -13,7 +13,7 @@
       fi
   }
   VALIDATE(){
-      if [ $? -ne 0 ]
+      if [ $1 -ne 0 ]
       then
       echo "$2 is $R failure $N"
             exit 1
