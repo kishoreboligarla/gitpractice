@@ -24,7 +24,7 @@ CHECK_ROOT
      if [ $? -ne 0 ]
       then
        echo "$package is not installed, going to install it.."
-        dnf list install $package -y
+        dnf  install $package -y
         VALIDATE $? "Installing $package"
       else
         echo "$package is already installed..nothing to do"
