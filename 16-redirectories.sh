@@ -4,7 +4,7 @@
   G="\e[32m"
   Y="\e[33m"
   N="\e[0m"
-  LOGS_FOLDER="/varlogs/shell-script"
+  LOGS_FOLDER="/var/logs/shell-script"
   SCRIPT_NAME"$(echo $0 | cut -d "." -f1)
   LOG_FILES="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
   mkdir -p $LOGS_FOLDER
