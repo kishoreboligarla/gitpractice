@@ -33,7 +33,7 @@
   }
   CHECK_ROOT
 
-  if [ $# -ne 0 ]
+  if [ $# -eq 0 ]
   then 
   USEAGE
   fi
