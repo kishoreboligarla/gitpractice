@@ -15,7 +15,7 @@
       echo "run the script with root priviliges" &>>$LOG_FILE
       exit 1
       fi
- 
+  }
   VALIDATE(){
       if [ $1 -ne 0 ]
       then
@@ -26,7 +26,8 @@
       exit 1
       fi
   }
-   }
+  echo "script started at : $(date)"
+   
   USEAGE(){
   echo "USEAGE :: sudo sh 16-redirectories.sh package1 package2 ..." &>>$LOG_FILE
   exit 1
