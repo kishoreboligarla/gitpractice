@@ -1,8 +1,8 @@
 #!/bin/bash
 USERID=$(id -u)
 R="\e[31m"
-G="\e[30m"
-Y="\e[32m"
+G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 CHECK_ROOT(){
