@@ -26,7 +26,7 @@
       exit 1
       fi
   }
-  echo "script started at : $(date)" &>>$LOG_FILE | tee -a LOG_FILE
+  echo "script started at : $(date)" &>>$LOG_FILE | tee -a $LOG_FILE
    
   USEAGE(){
   echo "USEAGE :: sudo sh 16-redirectories.sh package1 package2 ..." &>>$LOG_FILE | tee -a $LOG_FILE
