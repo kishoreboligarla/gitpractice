@@ -47,6 +47,6 @@
           dnf  install $package -y &>>$LOG_FILE
           VALIDATE $? "Installing $package"
         else
-          echo -e  "$package $G is already installed..nothing to do $N" &>>$LOG_FILE | tee -a $LOG_FILE
+          echo -e  "$package $G is already installed..nothing to do $N" &>>$LOG_FILE #| tee -a $LOG_FILE
           fi
     done
