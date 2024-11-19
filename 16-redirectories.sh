@@ -12,7 +12,7 @@
   CHECK_ROOT(){
       if [ $USERID -ne 0 ]
       then
-      echo "run the script with root priviliges" tee -a $LOG_FILE
+      echo "run the script with root priviliges" | tee -a $LOG_FILE
       exit 1
       fi
   }
@@ -29,7 +29,7 @@
   echo "script started at : $(date)" &>>$LOG_FILE | tee -a $LOG_FILE
    
   USEAGE(){
-  echo "USEAGE :: sudo sh 16-redirectories.sh package1 package2 ..." &>>$LOG_FILE | tee -a $LOG_FILE
+  echo "USEAGE :: sudo sh 16-redirectories.sh package1 package2 ..." | tee -a $LOG_FILE
   exit 1
   }
   CHECK_ROOT
@@ -43,10 +43,10 @@
         dnf list installed  $package $LOG_FILE
       if [ $? -ne 0 ]
         then
-        echo  -e  "$package $Y is not installed, going to install it.. $N"  &>>$LOG_FILE | tee -a $LOG_FILE
+        echo  -e  "$package $Y is not installed, going to install it.. $N"  | tee -a $LOG_FILE
           dnf  install $package -y &>>$LOG_FILE
           VALIDATE $? "Installing $package"
         else
-          echo -e  "$package $G is already installed..nothing to do $N" &>>$LOG_FILE | tee -a $LOG_FILE
+          echo -e  "$package $G is already installed..nothing to do $N" | tee -a $LOG_FILE
           fi
     done
