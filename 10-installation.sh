@@ -20,7 +20,7 @@ USERID=$(id -u)
  then 
      echo "mysql is not installed going to install.."
      dnf install mysql -y
-     if [ $? -ne o ]
+     if [ $? -ne 0 ]
         then 
            echo "mysql installation is failure check it.."
           exit 1
